@@ -11,9 +11,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             HeaderView()
-                
             PortfolioCard()
-            
             HStack {
                 Text("Watchlist")
                     .font(.largeTitle)
@@ -21,7 +19,9 @@ struct ContentView: View {
                     .foregroundColor(.darkBlue)
                 Spacer()
             }
-            
+            StockCard()
+            StockCard()
+            StockCard()
             Spacer()
         }
         .padding()
