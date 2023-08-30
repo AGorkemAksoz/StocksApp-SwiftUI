@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HeaderView: View {
+    @Binding var showSheet: Bool
     var body: some View {
         HStack {
             Text("My Stocks")
@@ -16,7 +17,7 @@ struct HeaderView: View {
                 .foregroundColor(.darkBlue)
             Spacer()
             Button {
-                print("Search button tapped!")
+                showSheet.toggle()
             } label: {
                 Image(systemName: "magnifyingglass.circle.fill")
                     .foregroundColor(.darkBlue)
@@ -27,9 +28,3 @@ struct HeaderView: View {
     }
 }
 
-struct HeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        HeaderView()
-            .padding()
-    }
-}

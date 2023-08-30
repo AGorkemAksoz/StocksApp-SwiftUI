@@ -11,6 +11,10 @@
 		DD35E4D02A94013F005690F9 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E4CF2A94013F005690F9 /* Color+Ext.swift */; };
 		DD35E4D22A940345005690F9 /* PortfolioCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E4D12A940345005690F9 /* PortfolioCard.swift */; };
 		DD35E4D42A967393005690F9 /* StockCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E4D32A967393005690F9 /* StockCard.swift */; };
+		DD35E4D62A9A5E77005690F9 /* WatchlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E4D52A9A5E77005690F9 /* WatchlistView.swift */; };
+		DD35E4D82A9F4EDF005690F9 /* StockMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E4D72A9F4EDF005690F9 /* StockMockData.swift */; };
+		DD35E4DA2A9F4F8C005690F9 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E4D92A9F4F8C005690F9 /* LineChart.swift */; };
+		DD35E4DC2A9F4FF0005690F9 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E4DB2A9F4FF0005690F9 /* Array+Ext.swift */; };
 		DEB54EE22A9342D2004BCBC4 /* StocksApp_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB54EE12A9342D2004BCBC4 /* StocksApp_SwiftUIApp.swift */; };
 		DEB54EE42A9342D2004BCBC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB54EE32A9342D2004BCBC4 /* ContentView.swift */; };
 		DEB54EE62A9342D3004BCBC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB54EE52A9342D3004BCBC4 /* Assets.xcassets */; };
@@ -22,6 +26,10 @@
 		DD35E4CF2A94013F005690F9 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		DD35E4D12A940345005690F9 /* PortfolioCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCard.swift; sourceTree = "<group>"; };
 		DD35E4D32A967393005690F9 /* StockCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCard.swift; sourceTree = "<group>"; };
+		DD35E4D52A9A5E77005690F9 /* WatchlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistView.swift; sourceTree = "<group>"; };
+		DD35E4D72A9F4EDF005690F9 /* StockMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockMockData.swift; sourceTree = "<group>"; };
+		DD35E4D92A9F4F8C005690F9 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		DD35E4DB2A9F4FF0005690F9 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		DEB54EDE2A9342D2004BCBC4 /* StocksApp-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StocksApp-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB54EE12A9342D2004BCBC4 /* StocksApp_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksApp_SwiftUIApp.swift; sourceTree = "<group>"; };
 		DEB54EE32A9342D2004BCBC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +54,8 @@
 				DD35E4CC2A93FF1C005690F9 /* HeaderView.swift */,
 				DD35E4D12A940345005690F9 /* PortfolioCard.swift */,
 				DD35E4D32A967393005690F9 /* StockCard.swift */,
+				DD35E4D52A9A5E77005690F9 /* WatchlistView.swift */,
+				DD35E4D92A9F4F8C005690F9 /* LineChart.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -54,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				DD35E4CF2A94013F005690F9 /* Color+Ext.swift */,
+				DD35E4DB2A9F4FF0005690F9 /* Array+Ext.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -83,6 +94,7 @@
 				DEB54EE32A9342D2004BCBC4 /* ContentView.swift */,
 				DEB54EE52A9342D3004BCBC4 /* Assets.xcassets */,
 				DEB54EE72A9342D3004BCBC4 /* Preview Content */,
+				DD35E4D72A9F4EDF005690F9 /* StockMockData.swift */,
 			);
 			path = "StocksApp-SwiftUI";
 			sourceTree = "<group>";
@@ -167,9 +179,13 @@
 			files = (
 				DD35E4D22A940345005690F9 /* PortfolioCard.swift in Sources */,
 				DEB54EE42A9342D2004BCBC4 /* ContentView.swift in Sources */,
+				DD35E4DA2A9F4F8C005690F9 /* LineChart.swift in Sources */,
 				DD35E4D02A94013F005690F9 /* Color+Ext.swift in Sources */,
+				DD35E4D62A9A5E77005690F9 /* WatchlistView.swift in Sources */,
 				DD35E4CD2A93FF1C005690F9 /* HeaderView.swift in Sources */,
 				DD35E4D42A967393005690F9 /* StockCard.swift in Sources */,
+				DD35E4DC2A9F4FF0005690F9 /* Array+Ext.swift in Sources */,
+				DD35E4D82A9F4EDF005690F9 /* StockMockData.swift in Sources */,
 				DEB54EE22A9342D2004BCBC4 /* StocksApp_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

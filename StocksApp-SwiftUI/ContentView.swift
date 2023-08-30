@@ -8,24 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isShowingStockSearchSheet: Bool = false
     var body: some View {
         VStack {
-            HeaderView()
+            HeaderView(showSheet: $isShowingStockSearchSheet)
             PortfolioCard()
-            HStack {
-                Text("Watchlist")
-                    .font(.largeTitle)
-                    .bold()
-                    .foregroundColor(.darkBlue)
-                Spacer()
-            }
-            StockCard()
-            StockCard()
-            StockCard()
+            WatchlistView()
+                
             Spacer()
+
         }
         .padding()
+        .edgesIgnoringSafeArea(.bottom)
+        .sheet(isPresented: $isShowingStockSearchSheet) {
+            Text("Search View")
+        }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

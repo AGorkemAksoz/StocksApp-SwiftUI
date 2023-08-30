@@ -40,7 +40,9 @@ struct StockCard: View {
                     .font(.title)
                     .bold()
                 Spacer()
-                Text("Graph")
+                LineChart(data: StockMockData.apple.normalizedValues)
+                    .stroke(Color.lightGreen, lineWidth: 2)
+                
             }
         }
         .padding(.all)
