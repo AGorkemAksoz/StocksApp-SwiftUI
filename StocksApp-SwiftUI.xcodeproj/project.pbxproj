@@ -15,6 +15,10 @@
 		DD35E4D82A9F4EDF005690F9 /* StockMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E4D72A9F4EDF005690F9 /* StockMockData.swift */; };
 		DD35E4DA2A9F4F8C005690F9 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E4D92A9F4F8C005690F9 /* LineChart.swift */; };
 		DD35E4DC2A9F4FF0005690F9 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E4DB2A9F4FF0005690F9 /* Array+Ext.swift */; };
+		DE43A0882AE6928B00F698F8 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43A0872AE6928B00F698F8 /* APIRequest.swift */; };
+		DE43A08B2AE6956B00F698F8 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43A08A2AE6956B00F698F8 /* Stock.swift */; };
+		DE43A08D2AE697B500F698F8 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43A08C2AE697B500F698F8 /* Symbol.swift */; };
+		DE43A08F2AE6995700F698F8 /* Candle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43A08E2AE6995700F698F8 /* Candle.swift */; };
 		DEB54EE22A9342D2004BCBC4 /* StocksApp_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB54EE12A9342D2004BCBC4 /* StocksApp_SwiftUIApp.swift */; };
 		DEB54EE42A9342D2004BCBC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB54EE32A9342D2004BCBC4 /* ContentView.swift */; };
 		DEB54EE62A9342D3004BCBC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB54EE52A9342D3004BCBC4 /* Assets.xcassets */; };
@@ -30,6 +34,10 @@
 		DD35E4D72A9F4EDF005690F9 /* StockMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockMockData.swift; sourceTree = "<group>"; };
 		DD35E4D92A9F4F8C005690F9 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		DD35E4DB2A9F4FF0005690F9 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
+		DE43A0872AE6928B00F698F8 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		DE43A08A2AE6956B00F698F8 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		DE43A08C2AE697B500F698F8 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		DE43A08E2AE6995700F698F8 /* Candle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candle.swift; sourceTree = "<group>"; };
 		DEB54EDE2A9342D2004BCBC4 /* StocksApp-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StocksApp-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB54EE12A9342D2004BCBC4 /* StocksApp_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksApp_SwiftUIApp.swift; sourceTree = "<group>"; };
 		DEB54EE32A9342D2004BCBC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +77,24 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		DE43A0862AE6925100F698F8 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DE43A0872AE6928B00F698F8 /* APIRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DE43A0892AE6955D00F698F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE43A08A2AE6956B00F698F8 /* Stock.swift */,
+				DE43A08C2AE697B500F698F8 /* Symbol.swift */,
+				DE43A08E2AE6995700F698F8 /* Candle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DEB54ED52A9342D2004BCBC4 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +114,8 @@
 		DEB54EE02A9342D2004BCBC4 /* StocksApp-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				DE43A0892AE6955D00F698F8 /* Model */,
+				DE43A0862AE6925100F698F8 /* Request */,
 				DD35E4CE2A9400DB005690F9 /* Helpers */,
 				DD35E4CB2A93FF13005690F9 /* Views */,
 				DEB54EE12A9342D2004BCBC4 /* StocksApp_SwiftUIApp.swift */,
@@ -179,11 +207,15 @@
 			files = (
 				DD35E4D22A940345005690F9 /* PortfolioCard.swift in Sources */,
 				DEB54EE42A9342D2004BCBC4 /* ContentView.swift in Sources */,
+				DE43A08F2AE6995700F698F8 /* Candle.swift in Sources */,
+				DE43A08B2AE6956B00F698F8 /* Stock.swift in Sources */,
 				DD35E4DA2A9F4F8C005690F9 /* LineChart.swift in Sources */,
 				DD35E4D02A94013F005690F9 /* Color+Ext.swift in Sources */,
+				DE43A08D2AE697B500F698F8 /* Symbol.swift in Sources */,
 				DD35E4D62A9A5E77005690F9 /* WatchlistView.swift in Sources */,
 				DD35E4CD2A93FF1C005690F9 /* HeaderView.swift in Sources */,
 				DD35E4D42A967393005690F9 /* StockCard.swift in Sources */,
+				DE43A0882AE6928B00F698F8 /* APIRequest.swift in Sources */,
 				DD35E4DC2A9F4FF0005690F9 /* Array+Ext.swift in Sources */,
 				DD35E4D82A9F4EDF005690F9 /* StockMockData.swift in Sources */,
 				DEB54EE22A9342D2004BCBC4 /* StocksApp_SwiftUIApp.swift in Sources */,
@@ -315,7 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StocksApp-SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = DC2CCCCLGJ;
+				DEVELOPMENT_TEAM = JKQNUCPDQL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -345,7 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StocksApp-SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = DC2CCCCLGJ;
+				DEVELOPMENT_TEAM = JKQNUCPDQL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

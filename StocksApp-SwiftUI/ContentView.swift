@@ -23,6 +23,11 @@ struct ContentView: View {
         .sheet(isPresented: $isShowingStockSearchSheet) {
             Text("Search View")
         }
+        .onAppear {
+            APIRequest.shared.getCandles(symbol: "AAPL", hourLength: 8) { returnedCandle in
+                print(returnedCandle)
+            }
+        }
     }
     
 }
