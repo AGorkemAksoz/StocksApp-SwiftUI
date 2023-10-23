@@ -19,6 +19,8 @@
 		DE43A08B2AE6956B00F698F8 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43A08A2AE6956B00F698F8 /* Stock.swift */; };
 		DE43A08D2AE697B500F698F8 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43A08C2AE697B500F698F8 /* Symbol.swift */; };
 		DE43A08F2AE6995700F698F8 /* Candle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43A08E2AE6995700F698F8 /* Candle.swift */; };
+		DE43A0922AE6B37400F698F8 /* StocksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43A0912AE6B37400F698F8 /* StocksViewModel.swift */; };
+		DE43A0952AE6B43F00F698F8 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43A0942AE6B43F00F698F8 /* StockModel.swift */; };
 		DEB54EE22A9342D2004BCBC4 /* StocksApp_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB54EE12A9342D2004BCBC4 /* StocksApp_SwiftUIApp.swift */; };
 		DEB54EE42A9342D2004BCBC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB54EE32A9342D2004BCBC4 /* ContentView.swift */; };
 		DEB54EE62A9342D3004BCBC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB54EE52A9342D3004BCBC4 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 		DE43A08A2AE6956B00F698F8 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		DE43A08C2AE697B500F698F8 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		DE43A08E2AE6995700F698F8 /* Candle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candle.swift; sourceTree = "<group>"; };
+		DE43A0912AE6B37400F698F8 /* StocksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewModel.swift; sourceTree = "<group>"; };
+		DE43A0942AE6B43F00F698F8 /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
 		DEB54EDE2A9342D2004BCBC4 /* StocksApp-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StocksApp-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB54EE12A9342D2004BCBC4 /* StocksApp_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksApp_SwiftUIApp.swift; sourceTree = "<group>"; };
 		DEB54EE32A9342D2004BCBC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,11 +92,28 @@
 		DE43A0892AE6955D00F698F8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DE43A0932AE6B42B00F698F8 /* ResponseModels */,
+				DE43A0942AE6B43F00F698F8 /* StockModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE43A0902AE6B36800F698F8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DE43A0912AE6B37400F698F8 /* StocksViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DE43A0932AE6B42B00F698F8 /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
 				DE43A08A2AE6956B00F698F8 /* Stock.swift */,
 				DE43A08C2AE697B500F698F8 /* Symbol.swift */,
 				DE43A08E2AE6995700F698F8 /* Candle.swift */,
 			);
-			path = Model;
+			path = ResponseModels;
 			sourceTree = "<group>";
 		};
 		DEB54ED52A9342D2004BCBC4 = {
@@ -114,6 +135,7 @@
 		DEB54EE02A9342D2004BCBC4 /* StocksApp-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				DE43A0902AE6B36800F698F8 /* ViewModel */,
 				DE43A0892AE6955D00F698F8 /* Model */,
 				DE43A0862AE6925100F698F8 /* Request */,
 				DD35E4CE2A9400DB005690F9 /* Helpers */,
@@ -205,11 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE43A0952AE6B43F00F698F8 /* StockModel.swift in Sources */,
 				DD35E4D22A940345005690F9 /* PortfolioCard.swift in Sources */,
 				DEB54EE42A9342D2004BCBC4 /* ContentView.swift in Sources */,
 				DE43A08F2AE6995700F698F8 /* Candle.swift in Sources */,
 				DE43A08B2AE6956B00F698F8 /* Stock.swift in Sources */,
 				DD35E4DA2A9F4F8C005690F9 /* LineChart.swift in Sources */,
+				DE43A0922AE6B37400F698F8 /* StocksViewModel.swift in Sources */,
 				DD35E4D02A94013F005690F9 /* Color+Ext.swift in Sources */,
 				DE43A08D2AE697B500F698F8 /* Symbol.swift in Sources */,
 				DD35E4D62A9A5E77005690F9 /* WatchlistView.swift in Sources */,

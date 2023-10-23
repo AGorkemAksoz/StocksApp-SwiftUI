@@ -8,27 +8,32 @@
 import SwiftUI
 
 struct StockCard: View {
+    let stockModel: StockModel
+    @State private var logoStr: String = ""
     var body: some View {
         VStack {
             HStack {
-                //                AsyncImage(url: URL(string: "https://logo.clearbit.com/apple.com"))
-                Image(systemName: "appletv.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 50, height: 50)
+                AsyncImage(url: URL(string: "https://logo.clearbit.com/\(logoStr).com")) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50, height: 50)
+                } placeholder: {
+                    ProgressView()
+                }
                 
                 VStack(alignment: .leading) {
-                    Text("AAPL")
+                    Text(stockModel.symbol)
                         .bold()
                         .font(.title3)
-                    Text("Apple Inc.")
+                    Text(stockModel.description ?? "Unknown Description")
                         .foregroundColor(.gray)
                         .lineLimit(1)
                         .truncationMode(.tail)
                 }
                 Spacer()
                 
-                Text("1.2%")
+                Text("\(String(format: "%.2f", stockModel.percentageChange ?? 0))%")
                     .bold()
                     .font(.title3)
                     .foregroundColor(.lightGreen)
@@ -36,7 +41,7 @@ struct StockCard: View {
             Spacer()
             
             HStack {
-                Text("$137.59")
+                Text("$\(String(format: "%.2f", stockModel.currentPrice ?? 0))")
                     .font(.title)
                     .bold()
                 Spacer()
@@ -53,11 +58,17 @@ struct StockCard: View {
             RoundedRectangle(cornerRadius: 30)
                 .stroke(Color.gray)
         )
+        .onAppear(perform: {
+            if let logoStr = stockModel.description?.components(separatedBy: " ").first {
+                // get first word
+                self.logoStr = logoStr.lowercased()
+            }
+        })
     }
 }
-
-struct StockCard_Previews: PreviewProvider {
-    static var previews: some View {
-        StockCard()
-    }
-}
+//
+//struct StockCard_Previews: PreviewProvider {
+//    static var previews: some View {
+//        StockCard()
+//    }
+//}

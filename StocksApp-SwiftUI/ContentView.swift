@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var stocksVM: StocksViewModel = StocksViewModel()
     @State private var isShowingStockSearchSheet: Bool = false
     var body: some View {
         VStack {
             HeaderView(showSheet: $isShowingStockSearchSheet)
-            PortfolioCard()
-            WatchlistView()
+            PortfolioCard(stocksVM: stocksVM)
+            WatchlistView(stocksVM: stocksVM)
                 
             Spacer()
 
@@ -22,11 +23,6 @@ struct ContentView: View {
         .edgesIgnoringSafeArea(.bottom)
         .sheet(isPresented: $isShowingStockSearchSheet) {
             Text("Search View")
-        }
-        .onAppear {
-            APIRequest.shared.getCandles(symbol: "AAPL", hourLength: 8) { returnedCandle in
-                print(returnedCandle)
-            }
         }
     }
     
