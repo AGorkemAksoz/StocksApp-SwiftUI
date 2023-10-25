@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class StocksViewModel: ObservableObject {
-    var tickers = ["AAPL", "NVDA", "MSFT", "NKE"]
+    var tickers = ["AAPL", "NVDA", "NFLX", "NKE"]
     
     @Published var stocks: [StockModel] = [StockModel]()
     

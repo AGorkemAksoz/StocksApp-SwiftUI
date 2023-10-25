@@ -21,6 +21,7 @@ struct StockCard: View {
                 } placeholder: {
                     ProgressView()
                 }
+                .cornerRadius(10)
                 
                 VStack(alignment: .leading) {
                     Text(stockModel.symbol)
@@ -33,10 +34,14 @@ struct StockCard: View {
                 }
                 Spacer()
                 
-                Text("\(String(format: "%.2f", stockModel.percentageChange ?? 0))%")
+                Text(
+                    "\((stockModel.percentageChange ?? 0.0) >= 0.0 ? "+" : "")"
+                    +
+                    "\(String(format: "%.2f", stockModel.percentageChange ?? 0))%"
+                )
                     .bold()
                     .font(.title3)
-                    .foregroundColor(.lightGreen)
+                    .foregroundColor((stockModel.percentageChange ?? 0.0) >= 0.0 ? .lightGreen : .red)
             }
             Spacer()
             
@@ -45,8 +50,8 @@ struct StockCard: View {
                     .font(.title)
                     .bold()
                 Spacer()
-                LineChart(data: StockMockData.apple.normalizedValues)
-                    .stroke(Color.lightGreen, lineWidth: 2)
+                LineChart(data: stockModel.candles.normalizedValues)
+                    .stroke((stockModel.percentageChange ?? 0.0) >= 0.0 ? Color.lightGreen : Color.red, lineWidth: 1.5)
                 
             }
         }
